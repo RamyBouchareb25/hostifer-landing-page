@@ -35,7 +35,7 @@ jobs:
           script: |
             cd /home/ramy/landing-page          
 
-            docker compose down --volumes
+            docker compose down
 
             docker rmi ${{ secrets.DOCKER_USERNAME }}/landing-page:latest || true
 
