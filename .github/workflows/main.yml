@@ -35,11 +35,11 @@ jobs:
           script: |
             cd /home/ramy/landing-page          
 
-            docker compose down
+            docker-compose down
 
             docker rmi ${{ secrets.DOCKER_USERNAME }}/landing-page:latest || true
 
             docker image prune -f
 
-            docker compose pull
-            docker compose up -d
+            docker-compose pull
+            docker-compose up -d
